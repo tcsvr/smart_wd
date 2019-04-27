@@ -4,7 +4,7 @@ $hostname = 'localhost';        //主机名
 $dbusername = 'root';           //数据库用户名
 $dbpassword = 'root';           //数据库密码
 $dbcharset = 'utf8';            //数据库编码
-$dbtable =  'b1901_wendo';      //数据库名（要查询的数据库）
+$dbtable =  'smarty_wd';      //数据库名（要查询的数据库）
 
 
 

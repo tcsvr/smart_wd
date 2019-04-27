@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2019-04-27 18:32:46
-  from "C:\phpStudy\PHPTutorial\WWW\www.smarty_wd.com\template\templates\index.html" */
+/* Smarty version 3.1.28, created on 2019-04-28 00:44:44
+  from "D:\phpStudy\PHPTutorial\WWW\smart_wd\template\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5cc42fcec48021_23758842',
+  'unifunc' => 'content_5cc486fc82d5c7_90649370',
   'file_dependency' => 
   array (
-    '7b2269ce0e5071c7986208e037806820df473577' => 
+    'bb4167de7e04ef97130fda3fa374514163e334c3' => 
     array (
-      0 => 'C:\\phpStudy\\PHPTutorial\\WWW\\www.smarty_wd.com\\template\\templates\\index.html',
-      1 => 1556361161,
+      0 => 'D:\\phpStudy\\PHPTutorial\\WWW\\smart_wd\\template\\templates\\index.html',
+      1 => 1556383481,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,9 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5cc42fcec48021_23758842 ($_smarty_tpl) {
+function content_5cc486fc82d5c7_90649370 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_truncate')) require_once 'D:\\phpStudy\\PHPTutorial\\WWW\\smart_wd\\include\\smarty3.1.28\\plugins\\modifier.truncate.php';
+if (!is_callable('smarty_modifier_date_format')) require_once 'D:\\phpStudy\\PHPTutorial\\WWW\\smart_wd\\include\\smarty3.1.28\\plugins\\modifier.date_format.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,144 +114,146 @@ $_smarty_tpl->tpl_vars['v'] = $__foreach_v_1_saved_item;
 			<i></i>
 			<p>我们为您提供，最精致的服务，最全面的技术</p>
 			<ul id="service">
+					<?php
+$_from = $_smarty_tpl->tpl_vars['service']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_v_2_saved_item = isset($_smarty_tpl->tpl_vars['v']) ? $_smarty_tpl->tpl_vars['v'] : false;
+$__foreach_v_2_saved_key = isset($_smarty_tpl->tpl_vars['k']) ? $_smarty_tpl->tpl_vars['k'] : false;
+$_smarty_tpl->tpl_vars['v'] = new Smarty_Variable();
+$__foreach_v_2_total = $_smarty_tpl->smarty->ext->_foreach->count($_from);
+if ($__foreach_v_2_total) {
+$_smarty_tpl->tpl_vars['k'] = new Smarty_Variable();
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+$__foreach_v_2_saved_local_item = $_smarty_tpl->tpl_vars['v'];
+?>
+					<?php if ($_smarty_tpl->tpl_vars['k']->value == 0) {?>
+
 				<li>
 					<a href="" class="ser_a">
-					<img src="images/server_01.jpg" alt="">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['s_img1'];?>
+" alt="">
 					<br>
-					高品质网站<br>解决方案
+					<?php echo $_smarty_tpl->tpl_vars['v']->value['s_title'];?>
+
 					</a>
 				</li>
+				<?php } else { ?>
 				<li>
 					<a href="">
-					<img src="images/server_02.gif" alt="">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['s_img2'];?>
+" alt="">
 					<br>
-					电子商务平台<br>解决方案
+					<?php echo $_smarty_tpl->tpl_vars['v']->value['s_title'];?>
+
 					</a>
 				</li>
-				<li>
-					<a href="">
-					<img src="images/server_03.gif" alt="">
-					<br>
-					PHP网站开发人才<br>解决方案
-					</a>
-				</li>
-				<li>
-					<a href="">
-					<img src="images/server_04.gif" alt="">
-					<br>
-					网站创意设计<br>解决方案
-					</a>
-				</li>
-				<li>
-					<a href="">
-					<img src="images/server_05.gif" alt="">
-					<br>
-					微信应用公众号开发<br>解决方案
-					</a>
-				</li>
-				<li>
-					<a href="">
-					<img src="images/server_06.gif" alt="">
-					<br>
-					移动端应用APP开发<br>解决方案
-					</a>
-				</li>
+				<?php }?>
+				<?php
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_2_saved_local_item;
+}
+}
+if ($__foreach_v_2_saved_item) {
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_2_saved_item;
+}
+if ($__foreach_v_2_saved_key) {
+$_smarty_tpl->tpl_vars['k'] = $__foreach_v_2_saved_key;
+}
+?>
 			</ul>
 		</div>
 		<div class="case">
 			<h1>案例展示<br><span>Cases</span></h1>
 			<i></i>
 			<nav>
-				<a href="case_list.html" class="case_a">企业品牌网站</a>
-				<a href="case_list.html">电子商务网站</a>
-				<a href="case_list.html">门户型网站</a>
-				<a href="case_list.html">管理系统</a>
-				<a href="case_list.html">团购</a>
+				<?php
+$_from = $_smarty_tpl->tpl_vars['category']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_v_3_saved_item = isset($_smarty_tpl->tpl_vars['v']) ? $_smarty_tpl->tpl_vars['v'] : false;
+$_smarty_tpl->tpl_vars['v'] = new Smarty_Variable();
+$__foreach_v_3_total = $_smarty_tpl->smarty->ext->_foreach->count($_from);
+if ($__foreach_v_3_total) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$__foreach_v_3_saved_local_item = $_smarty_tpl->tpl_vars['v'];
+?>
+				<?php if ($_smarty_tpl->tpl_vars['v']->value['ca_id'] == $_smarty_tpl->tpl_vars['caid']->value) {?>
+				<a href="?naid=<?php echo $_smarty_tpl->tpl_vars['navcu']->value['n_id'];?>
+&caid=<?php echo $_smarty_tpl->tpl_vars['v']->value['ca_id'];?>
+" class="case_a"><?php echo $_smarty_tpl->tpl_vars['v']->value['ca_name'];?>
+</a>
+					<?php } else { ?>
+				<a href="?naid=<?php echo $_smarty_tpl->tpl_vars['navcu']->value['n_id'];?>
+&caid=<?php echo $_smarty_tpl->tpl_vars['v']->value['ca_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value['ca_name'];?>
+</a>
+				<?php }?>
+				<?php
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_3_saved_local_item;
+}
+}
+if ($__foreach_v_3_saved_item) {
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_3_saved_item;
+}
+?>
 			</nav>
 			<ul>
+
+					<?php
+$_from = $_smarty_tpl->tpl_vars['case']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_v_4_saved_item = isset($_smarty_tpl->tpl_vars['v']) ? $_smarty_tpl->tpl_vars['v'] : false;
+$_smarty_tpl->tpl_vars['v'] = new Smarty_Variable();
+$__foreach_v_4_total = $_smarty_tpl->smarty->ext->_foreach->count($_from);
+if ($__foreach_v_4_total) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$__foreach_v_4_saved_local_item = $_smarty_tpl->tpl_vars['v'];
+?>
+
 				<li>
-					<a href="case.html">
-						<img src="images/case_01.jpg" alt="">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['get']->value;?>
+cid=<?php echo $_smarty_tpl->tpl_vars['v']->value['c_id'];?>
+">
+						<img src="<?php echo $_smarty_tpl->tpl_vars['_UPLOAD_']->value;
+echo $_smarty_tpl->tpl_vars['v']->value['c_img'];?>
+" alt="">
 						<div>
 							<img src="images/look.png" alt="">
 							<br>
-							simifly---Home
+							<?php echo $_smarty_tpl->tpl_vars['v']->value['c_id'];?>
+---<?php echo $_smarty_tpl->tpl_vars['v']->value['c_title'];?>
+
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href="case.html">
-						<img src="images/case_02.jpg" alt="">
-						<div>
-							<img src="images/look.png" alt="">
-							<br>
-							simifly---Home
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="case.html">
-						<img src="images/case_03.jpg" alt="">
-						<div>
-							<img src="images/look.png" alt="">
-							<br>
-							simifly---Home
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="case.html">
-						<img src="images/case_04.jpg" alt="">
-						<div>
-							<img src="images/look.png" alt="">
-							<br>
-							simifly---Home
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="case.html">
-						<img src="images/case_05.jpg" alt="">
-						<div>
-							<img src="images/look.png" alt="">
-							<br>
-							simifly---Home
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="case.html">
-						<img src="images/case_06.jpg" alt="">
-						<div>
-							<img src="images/look.png" alt="">
-							<br>
-							simifly---Home
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="case.html">
-						<img src="images/case_07.jpg" alt="">
-						<div>
-							<img src="images/look.png" alt="">
-							<br>
-							simifly---Home
-						</div>
-					</a>
-				</li>
+				<?php
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_4_saved_local_item;
+}
+}
+if ($__foreach_v_4_saved_item) {
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_4_saved_item;
+}
+?>
 				<li>
 					<a href="case.html">
 						<img src="images/case_08.jpg" alt="">
 						<p>MORE</p>
 					</a>
 				</li>
+
 			</ul>
 		</div>
 		<div class="about">
 			<h1>关于我们<br><span>About us</span></h1>
 			<i></i>
 			<p class="about_p1">不用担心距离, 文豆就在你身边</p>
-			<p class="about_p2">文豆网络是一家提供互联网服务的高科技集团公司集策划、设计、前端优化、研发、测试、系统运维、网站推广、运营、团队外包及互联网人才培养为一体的成熟业务体系......</p>
+			<p class="about_p2">
+					<?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['about']->value,75,'');?>
+......</p>
 			<img src="images/point.png" alt="">
 			<br>
 			<a href="">点击查看</a>
@@ -262,34 +266,45 @@ $_smarty_tpl->tpl_vars['v'] = $__foreach_v_1_saved_item;
 				文豆集团，你身边的IT互联网专家
 			</p>
 			<ul>
+
+				<?php
+$_from = $_smarty_tpl->tpl_vars['news']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_v_5_saved_item = isset($_smarty_tpl->tpl_vars['v']) ? $_smarty_tpl->tpl_vars['v'] : false;
+$_smarty_tpl->tpl_vars['v'] = new Smarty_Variable();
+$__foreach_v_5_total = $_smarty_tpl->smarty->ext->_foreach->count($_from);
+if ($__foreach_v_5_total) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$__foreach_v_5_saved_local_item = $_smarty_tpl->tpl_vars['v'];
+?>
+
+
 				<li>
-					<div class="new_h">10.19 <br><span>2015</span></div>
+					<div class="new_h"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['n_time'],"%m-%d");?>
+ <br><span><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['n_time'],"%Y");?>
+</span></div>
 					<div class="new_p">
-						<h3><a href="">PHP系统设计与云架构<span>&gt;</span></a></h3>
-						<p>祝贺你成为广州市天河金领技工学校学生，学校坐落于国家第二大公共实训基地“广州开发区、萝岗区高技能人才公共实训基地”</p>
+						<h3><a href=""><?php echo $_smarty_tpl->tpl_vars['v']->value['n_title'];?>
+<span>&gt;</span></a></h3>
+						<p>
+							<?php echo $_smarty_tpl->tpl_vars['v']->value['n_intro'];?>
+
+						</p>
 					</div>
 				</li>
-				<li>
-					<div class="new_h">10.19 <br><span>2015</span></div>
-					<div class="new_p">
-						<h3><a href="">Ghost 博客中文版 0.5.5 正式发布<span>&gt;</span></a></h3>
-						<p>祝贺你成为广州市天河金领技工学校学生，学校坐落于国家第二大公共实训基地“广州开发区、萝岗区高技能人才公共实训基地”.</p>
-					</div>
-				</li>
-				<li>
-					<div class="new_h">10.19 <br><span>2015</span></div>
-					<div class="new_p">
-						<h3><a href="">ONES-PHP开源企业管理软件<span>&gt;</span></a></h3>
-						<p>祝贺你成为广州市天河金领技工学校学生，学校坐落于国家第二大公共实训基地“广州开发区、萝岗区高技能人才公共实训基地”.</p>
-					</div>
-				</li>
-				<li>
-					<div class="new_h">10.19 <br><span>2015</span></div>
-					<div class="new_p">
-						<h3><a href="">10款提高iOS开发效率的XCode插件<span>&gt;</span></a></h3>
-						<p>祝贺你成为广州市天河金领技工学校学生，学校坐落于国家第二大公共实训基地“广州开发区、萝岗区高技能人才公共实训基地”</p>
-					</div>
-				</li>
+				
+				<?php
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_5_saved_local_item;
+}
+}
+if ($__foreach_v_5_saved_item) {
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_5_saved_item;
+}
+?>
+
+
 			</ul>
 		</div>
 		<div class="partner">
@@ -298,66 +313,37 @@ $_smarty_tpl->tpl_vars['v'] = $__foreach_v_1_saved_item;
 			<i></i>
 			<p>他们选择了文豆，我们的专业合作伙伴</p>
 			<ul>
+				<?php
+$_from = $_smarty_tpl->tpl_vars['partner']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_v_6_saved_item = isset($_smarty_tpl->tpl_vars['v']) ? $_smarty_tpl->tpl_vars['v'] : false;
+$_smarty_tpl->tpl_vars['v'] = new Smarty_Variable();
+$__foreach_v_6_total = $_smarty_tpl->smarty->ext->_foreach->count($_from);
+if ($__foreach_v_6_total) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+$__foreach_v_6_saved_local_item = $_smarty_tpl->tpl_vars['v'];
+?>
+
 				<li>
-					<a href="">
-						<img src="images/partner_01.jpg" alt="">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['v']->value['p_link'];?>
+">
+						<img src="<?php echo $_smarty_tpl->tpl_vars['_UPLOAD_']->value;
+echo $_smarty_tpl->tpl_vars['v']->value['p_img'];?>
+" alt="" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['p_title'];?>
+">
 					</a>
 				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_02.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_03.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_04.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_05.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_06.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_07.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_08.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_09.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_010.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_011.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="images/partner_012.jpg" alt="">
-					</a>
-				</li>
+				<?php
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_6_saved_local_item;
+}
+}
+if ($__foreach_v_6_saved_item) {
+$_smarty_tpl->tpl_vars['v'] = $__foreach_v_6_saved_item;
+}
+?>
+
 			</ul>
 		</div>
 		<footer>
@@ -470,6 +456,11 @@ $_smarty_tpl->tpl_vars['v'] = $__foreach_v_1_saved_item;
 			this.className='';
 		}
 	}
+	$imgArr1 = <?php echo $_smarty_tpl->tpl_vars['imgArr1']->value;?>
+; 
+	$imgArr2 = <?php echo $_smarty_tpl->tpl_vars['imgArr2']->value;?>
+;
+
 	// 服务项目
 	var service=document.getElementById('service');
 	var li=service.getElementsByTagName('li');
@@ -479,11 +470,14 @@ $_smarty_tpl->tpl_vars['v'] = $__foreach_v_1_saved_item;
 	for(var i=0; i<li.length; i++){
 		li[i].index=i;
 		li[i].onmouseover=function(){
+
 			for(var i=0; i<li.length; i++){
-				img[i].src='images/server_0'+(i+1)+'.gif';
+
+			//img[i].src='images/server_0'+(i+1)+'.gif';
+				img[i].src=$imgArr2[i]
 				a[i].className='';
 			}
-			img[this.index].src='images/server_0'+(this.index+1)+'.jpg';
+			img[this.index].src=$imgArr1[this.index];
 			a[this.index].className="ser_a";
 		}
 	}

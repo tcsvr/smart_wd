@@ -50,8 +50,9 @@ $about = preg_replace("/<[^<>]+>/",'', $about); //过滤标签
 // $about = mb_substr($abuot,0,78,'utf-8');
 
 //最新资讯
-$sql = "SELECT `n_id`,`n_title`,`n_detail`,`n_time` FROM wd_news ORDER BY n_id DESC LIMIT 4";
+$sql = "SELECT `n_id`,`n_title`,`n_intro`,`n_time` FROM wd_news ORDER BY n_id DESC LIMIT 4";
 $news = getAll($sql);
+// pre($news);
 
 //合作伙伴
 $sql = "SELECT * FROM wd_partner";
@@ -68,8 +69,14 @@ $data = array(
 
     "nav"=>$nav,
     "banner"=>$banner,
+    "service"=>$service,
+    "imgArr1"=>$imgArr1,
+    "imgArr2"=>$imgArr2,
     "category"=>$category,
     "case"=>$case,
+    "get"=>$get,
+    "caid"=>$caid,
+    "navcu"=>$navcu,
     "about"=>$about,
     "news"=>$news,
     "partner"=>$partner,
