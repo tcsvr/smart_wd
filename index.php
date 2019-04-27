@@ -1,8 +1,5 @@
 <?php
 include('include/init.php');
-
-
-
 //服务项目
 $sql = "SELECT * FROM wd_service ORDER BY s_id ASC";
 $service = getAll($sql);
@@ -18,16 +15,10 @@ $imgArr1 = rtrim($imgArr1,',');
 $imgArr2 = rtrim($imgArr2,',');
 $imgArr1 .= "]";
 $imgArr2 .= "]";
-
-
 // pre($imgArr1);
-
-
 //案例分类
 $sql = "SELECT * FROM wd_case_category";
 $category = getAll($sql);
-
-
 //获取案例分类id
 $caid = isset($_GET['caid']) ? $_GET['caid']:1;
 $caid = intval($caid);   //确保是数字
@@ -58,24 +49,13 @@ $about = preg_replace("/<[^<>]+>/",'', $about); //过滤标签
 
 // $about = mb_substr($abuot,0,78,'utf-8');
 
-
 //最新资讯
 $sql = "SELECT `n_id`,`n_title`,`n_detail`,`n_time` FROM wd_news ORDER BY n_id DESC LIMIT 4";
 $news = getAll($sql);
 
-
-
 //合作伙伴
 $sql = "SELECT * FROM wd_partner";
 $partner = getAll($sql);
-
-// pre($partner);
-
-// $get = get_url();
-
-// echo $get;
-// exit;
-
 
 $get = get_url();
 
@@ -84,6 +64,20 @@ $get = str_replace('index.php','case.php',$get);
 // echo $get;
 // exit;
 
+$data = array(
 
-include('view/index.html');
+    "nav"=>$nav,
+    "banner"=>$banner,
+    "category"=>$category,
+    "case"=>$case,
+    "about"=>$about,
+    "news"=>$news,
+    "partner"=>$partner,
+    "_UPLOAD_"=>_UPLOAD_,
+
+);
+
+
+$smarty->assign($data);
+$smarty->display('index.html')
 ?>

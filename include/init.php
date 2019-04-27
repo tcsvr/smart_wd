@@ -7,6 +7,18 @@ include('include/function.php');
 //包含配置文件
 include('include/config.php');
 include_once('include/page/page.php');
+include('include/smarty3.1.28/Smarty.class.php');
+
+$smarty = new smarty();
+
+// var_dump($smarty);exit;
+
+$smarty->setTemplateDir('template/templates');
+
+$smarty->setCompileDir('template/templates_c');
+
+$smarty->setCacheDir('cache');
+
 
 
 // 连接数据库
